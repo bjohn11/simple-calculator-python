@@ -2,7 +2,6 @@ from os import truncate
 
 
 def is_number(str):
-    pass
     try:
         float(str)
         return True
@@ -11,18 +10,15 @@ def is_number(str):
 
 
 def convert_number(str):
-    pass
     return int(str)
 
 
 def is_valid_operator(operator):
-    pass
     Operators = ("+", "-", "/", "*")
     return operator in Operators
 
 
 def ask_for_a_number(force_valid_input):
-    pass
     while True:
         user_number = input("Please, enter a number! ")
         if is_number(user_number):
@@ -34,7 +30,6 @@ def ask_for_a_number(force_valid_input):
 
 
 def ask_for_an_operator(force_valid_input):
-    pass
     while True:
         operation = input("Please, enter an operator '+ ', '-', ' /', ' * ' ")
         if is_valid_operator(operation):
@@ -46,7 +41,6 @@ def ask_for_an_operator(force_valid_input):
 
 
 def calc(operator, a, b):
-    pass
     if not is_valid_operator(operator) or not is_number(a) or not is_number(b):
         return None
     result = None
@@ -63,7 +57,6 @@ def calc(operator, a, b):
 
 
 def simple_calculator():
-    pass
     while True:
         a = ask_for_a_number(force_valid_input=False)
         if not a:
